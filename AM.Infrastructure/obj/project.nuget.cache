@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KaJZceDWAc7B3Nxiu7ANhP7pZojG8CFto7737wwURzwXZk/USMtMdNFdThHGPBfuhw694fyNEA5iax90wuyoVg==",
+  "dgSpecHash": "N7Q3PEQx3CYlBGeN/SV3s1q/aWKVCbbDSXLleUPHBpKgnhdsyDbPGDwsuCAZrj4xY/aYe3UV6czzSWKd5UxzEQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LENOVO\\Downloads\\dotNet2\\.NETlil8alaba-main\\ConsoleApp4\\ApplicationCore\\ApplicationCore.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Downloads\\dotNet2\\.NETlil8alaba-main\\ConsoleApp4\\AM.Infrastructure\\AM.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.3\\microsoft.entityframeworkcore.7.0.3.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.3\\microsoft.entityframeworkcore.abstractions.7.0.3.nupkg.sha512",

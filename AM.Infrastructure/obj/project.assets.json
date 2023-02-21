@@ -216,6 +216,19 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "ApplicationCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.3"
+        },
+        "compile": {
+          "bin/placeholder/ApplicationCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApplicationCore.dll": {}
+        }
       }
     }
   },
@@ -554,10 +567,16 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "ApplicationCore/1.0.0": {
+      "type": "project",
+      "path": "../ApplicationCore/ApplicationCore.csproj",
+      "msbuildProject": "../ApplicationCore/ApplicationCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "ApplicationCore >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.3"
     ]
   },
@@ -567,11 +586,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Downloads\\dotNet2\\.NETlil8alaba-main\\ConsoleApp4\\ApplicationCore\\ApplicationCore.csproj",
-      "projectName": "ApplicationCore",
-      "projectPath": "C:\\Users\\LENOVO\\Downloads\\dotNet2\\.NETlil8alaba-main\\ConsoleApp4\\ApplicationCore\\ApplicationCore.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Downloads\\dotNet2\\.NETlil8alaba-main\\ConsoleApp4\\AM.Infrastructure\\AM.Infrastructure.csproj",
+      "projectName": "AM.Infrastructure",
+      "projectPath": "C:\\Users\\LENOVO\\Downloads\\dotNet2\\.NETlil8alaba-main\\ConsoleApp4\\AM.Infrastructure\\AM.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Downloads\\dotNet2\\.NETlil8alaba-main\\ConsoleApp4\\ApplicationCore\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Downloads\\dotNet2\\.NETlil8alaba-main\\ConsoleApp4\\AM.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -587,7 +606,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\LENOVO\\Downloads\\dotNet2\\.NETlil8alaba-main\\ConsoleApp4\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "C:\\Users\\LENOVO\\Downloads\\dotNet2\\.NETlil8alaba-main\\ConsoleApp4\\ApplicationCore\\ApplicationCore.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
