@@ -82,7 +82,7 @@ namespace ApplicationCore.Service
                 case "Flightid":
                     foreach (var item in Flights)
                     {
-                        if (item.FlightID == int.Parse(filterValue))
+                        if (item.FlightId == int.Parse(filterValue))
                         {
                             Console.WriteLine(item);
                         }
@@ -193,6 +193,12 @@ namespace ApplicationCore.Service
 
 
         }
+
+        void IServiceFlight.GetFlightDates(string destination)
+        {
+            throw new NotImplementedException();
+        }
+
         public Action<Plane> FlightDetailsDel;
         public Func<string, double> DurationAverageDel;
         public ServiceFlight()

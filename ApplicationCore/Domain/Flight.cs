@@ -8,6 +8,7 @@ namespace ConsoleApp4.Domain
 {
     public class Flight
     {
+        public int Id { get; set; }
         public string Destination { get; set; }
         public string Departure { get; set; }
         public DateTime FlightDate { get; set; }
@@ -16,6 +17,7 @@ namespace ConsoleApp4.Domain
         public int EstimatedDuration { get; set; }
 
         public Plane Plane { get; set; }
+        public string AirlineLogo { get; set; }
         public ICollection<Passenger> Passengers { get; set; }
         public int Key { get; internal set; }
 

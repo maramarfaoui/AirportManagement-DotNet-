@@ -8,6 +8,7 @@ namespace ConsoleApp4.Domain
 {
     public class Passenger
     {
+        public int Id { get; set; }
         public int PasseportNumber { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
