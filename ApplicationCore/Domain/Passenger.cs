@@ -1,5 +1,8 @@
-﻿using System;
+﻿using ApplicationCore.Domain;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,18 +11,23 @@ namespace ConsoleApp4.Domain
 {
     public class Passenger
     {
-        public int Id { get; set; }
-        public int PasseportNumber { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        [Key]
+        [StringLength(7)]
+        public string PasseportNumber { get; set; }
+        public FullName FullName { get; set; }
+        [EmailAddress]
         public string EmailAddress { get; set; }
+    
+        [RegularExpression(@"^[0-9]{8}$")]
         public string PhoneNumber { get; set; }
+        [Display(Name ="Date of Birth")]
+        [DataType(DataType.DateTime)]
         public DateTime BirthDate { get; set; }
         public ICollection<Flight> Flights { get; set; }
 
         //public bool CheckProfile(string fn,string ln)
         //{
-        //    if (FirstName==fn && LastName==ln)
+        //    if (FullName.FirstName==fn && FullName.LastName==ln)
         //    {
         //        return true;
         //    }
@@ -27,7 +35,7 @@ namespace ConsoleApp4.Domain
         //}
         //public bool CheckProfile(string fn, string ln,string email)
         //{
-        //    if (FirstName == fn && LastName == ln && EmailAddress==email)
+        //    if (FullName.FirstName == fn && FullName.LastName == ln && EmailAddress==email)
         //    {
         //        return true;
         //    }
@@ -37,7 +45,7 @@ namespace ConsoleApp4.Domain
         {
             if (email!=null)
             {
-                if (FirstName == fn && LastName == ln && EmailAddress == email)
+                if (FullName.FirstName == fn && FullName.LastName == ln && EmailAddress == email)
                 {
                     return true;
                 }

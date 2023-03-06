@@ -1,4 +1,5 @@
-﻿using ConsoleApp4.Domain;
+﻿using AM.Infrastructure.Configuration;
+using ConsoleApp4.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -22,5 +23,18 @@ namespace AM.Infrastructure
             Initial Catalog=MaramArfaouiDB;Integrated Security=true");
             base.OnConfiguring(optionsBuilder);
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new PlaneConfiguration());
+            modelBuilder.ApplyConfiguration(new FlightConfiguration());
+            modelBuilder.ApplyConfiguration(new PassengerConfiguration());
+        }
+        protected override void ConfigureConventions(ModelConfigurationBuilder modelConfigurationBuilder)
+        {
+            modelConfigurationBuilder
+                .Properties<DateTime>()
+                .HaveColumnType("date");
+        }
+        
     }
 }
